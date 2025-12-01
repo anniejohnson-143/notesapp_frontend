@@ -7,7 +7,7 @@ export default function Login() {
   const navigate = useNavigate();
 
   const login = async () => {
-    const res = await fetch("http://localhost:5000/auth/login", {
+    const res = await fetch("https://notesapp-backend-obqb.onrender.com/auth/login", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(form),

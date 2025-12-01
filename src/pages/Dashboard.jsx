@@ -16,7 +16,7 @@ export default function Dashboard() {
   }, []);
 
   const loadNotes = async () => {
-    const res = await fetch("http://localhost:5000/notes/my", {
+    const res = await fetch(" https://notesapp-backend-obqb.onrender.com/notes/my", {
       headers: { token },
     });
     const data = await res.json();
@@ -28,7 +28,7 @@ export default function Dashboard() {
 
     if (editId) {
       // Update note
-      await fetch(`http://localhost:5000/notes/update/${editId}`, {
+      await fetch(`https://notesapp-backend-obqb.onrender.com/notes/update/${editId}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json", token },
         body: JSON.stringify({ text }),
@@ -36,7 +36,7 @@ export default function Dashboard() {
       setEditId(null);
     } else {
       // Add new note
-      await fetch("http://localhost:5000/notes/add", {
+      await fetch("https://notesapp-backend-obqb.onrender.com/notes/add", {
         method: "POST",
         headers: { "Content-Type": "application/json", token },
         body: JSON.stringify({ text }),
@@ -53,7 +53,7 @@ export default function Dashboard() {
   };
 
   const deleteNote = async (id) => {
-    await fetch(`http://localhost:5000/notes/delete/${id}`, {
+    await fetch(`https://notesapp-backend-obqb.onrender.com/notes/delete/${id}`, {
       method: "DELETE",
       headers: { token },
     });
