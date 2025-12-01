@@ -1,0 +1,134 @@
+/* General body styling */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f0f2f5;
+  margin: 0;
+  padding: 0;
+}
+
+/* Navbar styling */
+.nav {
+  background: #4a90e2;
+  padding: 12px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* Left side link: NotesApp */
+.nav-left a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 6px 12px;
+  border-radius: 4px;
+  transition: background 0.2s ease;
+}
+
+.nav-left a:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Right side: Login/Register or Logout */
+.nav-right {
+  margin-left: auto; /* Push to the far right */
+  display: flex;
+  gap: 10px; /* Space between links/buttons */
+  align-items: center;
+}
+
+.nav-right a,
+.nav-right button {
+  color: white;
+  font-weight: 500;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  background: none;
+  text-decoration: none;
+  transition: background 0.2s ease;
+}
+
+.nav-right a:hover,
+.nav-right button:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Container for forms and dashboard */
+.container {
+  width: 400px;
+  margin: 40px auto;
+  background: #fff;
+  padding: 25px 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Inputs and textarea styling */
+input,
+textarea {
+  width: 100%;
+  padding: 10px 12px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: border 0.2s ease;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #4a90e2;
+  outline: none;
+}
+
+/* Buttons styling */
+button {
+  width: 100%;
+  padding: 10px 0;
+  margin-top: 10px;
+  background: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 500;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+button:hover {
+  background: #357ab8;
+  transform: translateY(-1px);
+}
+
+/* Notes styling in Dashboard */
+.note {
+  background: #f9f9f9;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+}
+
+/* Flex container for buttons inside note */
+.note-buttons {
+  display: flex;
+  gap: 8px; /* space between Edit and Delete */
+}
+
+.note button {
+  width: auto;
+  padding: 6px 10px;
+  background: #e74c3c;
+  font-size: 13px;
+}
+
+.note button:hover {
+  background: #c0392b;
+}
